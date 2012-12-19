@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  rollno: 1
+  password: MyString
+  confirmpassword: MyString
+  dob: MyString
+  gender: MyString
+  address: MyText
+  singing: false
+  dancing: false
+  reading: false
+
+two:
+  name: MyString
+  rollno: 1
+  password: MyString
+  confirmpassword: MyString
+  dob: MyString
+  gender: MyString
+  address: MyText
+  singing: false
+  dancing: false
+  reading: false
