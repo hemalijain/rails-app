@@ -1,0 +1,58 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :rollno %><br />
+    <%= f.number_field :rollno %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :confirmpassword %><br />
+    <%= f.password_field :confirmpassword %>
+  </div>
+  <div class="field">
+     <%= f.label :dob %><br />
+ <%= date_select('user','dob')%>
+</div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.radio_button 'gender', 'male'%> Male
+    <%= f.radio_button 'gender', 'female' %> Female
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :singing %><br />
+    <%= f.check_box :singing %>
+  </div>
+  <div class="field">
+    <%= f.label :dancing %><br />
+    <%= f.check_box :dancing %>
+  </div>
+  <div class="field">
+    <%= f.label :reading %><br />
+    <%= f.check_box :reading %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
