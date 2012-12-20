@@ -7,6 +7,10 @@ gem 'rails', '3.2.9'
 
 gem 'mysql2'
 
+group :development do
+  gem 'therubyracer'
+end  	
+
 group :production do
   gem 'pg'
 end	
@@ -18,7 +22,6 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'execjs'
-gem 'therubyracer'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
